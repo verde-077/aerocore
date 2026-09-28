@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, Factory, HeartPulse, Hotel, Home as HomeIcon, Play, Plus, Leaf, Settings, ShieldCheck, ChevronRight } from "lucide-react";
+import { Building2, Factory, HeartPulse, Hotel, Home as HomeIcon, Plus, Leaf, Settings, ShieldCheck, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { ArrowButton } from "@/components/site/ArrowButton";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -125,13 +125,6 @@ function Home() {
                     className="w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
                 </div>
-                <button
-                  type="button"
-                  aria-label="Play product film"
-                  className="absolute left-1/2 top-1/2 flex h-13 w-13 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-background/95 shadow-md backdrop-blur transition-all duration-300 hover:scale-110 hover:bg-background md:h-14 md:w-14 md:left-[46%] xl:h-16 xl:w-16"
-                >
-                  <Play className="h-4 w-4 text-ink transition-transform duration-300 group-hover:translate-x-0.5 xl:h-5 xl:w-5" strokeWidth={1.5} />
-                </button>
 
                 <div className="absolute right-0 top-4 hidden flex-col items-center gap-2.5 md:flex xl:-right-6">
                   <span className="block h-8 w-px bg-brand" />
