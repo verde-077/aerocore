@@ -18,8 +18,8 @@ export function ArrowButton({ to, params, label, tone = "light", size = "md" }: 
 
   return (
     <Link
-      to={to}
-      params={params as never}
+      to={to as any}
+      params={params as any}
       className="group inline-flex items-center gap-4"
     >
       <span

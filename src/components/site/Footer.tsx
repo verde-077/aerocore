@@ -14,11 +14,23 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline bg-background">
       <div className="mx-auto flex max-w-[1240px] flex-col gap-8 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-10">
-        <Logo />
+        <div className="flex items-center gap-3.5">
+          <Logo />
+          <div className="flex flex-col">
+            <span className="font-techno text-sm font-extrabold tracking-tight">
+              <span className="text-brand">ΛERO</span>
+              <span className="text-ink">CORE</span>
+              <span className="ml-1 text-ink font-bold">UAE</span>
+            </span>
+            <span className="font-sans text-[7px] font-medium tracking-[0.20em] text-subtle uppercase">
+              HVAC FILTERS &amp; PARTS
+            </span>
+          </div>
+        </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-3">
           {links.map((l) => (
-            <Link key={l.label} to={l.to} className="micro text-ink/70 hover:text-brand">
+            <Link key={l.label} to={l.to as any} className="micro text-ink/70 hover:text-brand">
               {l.label}
             </Link>
           ))}
