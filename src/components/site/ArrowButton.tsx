@@ -12,9 +12,9 @@ type Props = {
 
 export function ArrowButton({ to, params, label, tone = "light", size = "md" }: Props) {
   const dimension = size === "sm" ? "h-8 w-8" : "h-11 w-11";
-  const border = tone === "dark" ? "border-brand/80" : "border-brand/60";
-  const arrow = tone === "dark" ? "text-brand-foreground" : "text-ink";
-  const text = tone === "dark" ? "text-brand-foreground font-medium" : "text-ink font-medium";
+  const bg = "bg-brand border-brand";
+  const arrow = "text-white";
+  const text = tone === "dark" ? "text-white font-medium" : "text-ink font-medium";
 
   return (
     <Link
@@ -23,11 +23,11 @@ export function ArrowButton({ to, params, label, tone = "light", size = "md" }: 
       className="group inline-flex items-center gap-4"
     >
       <span
-        className={`flex ${dimension} shrink-0 items-center justify-center rounded-full border ${border} transition-all duration-300 ease-out group-hover:scale-[1.04] group-active:scale-[1.04] group-hover:bg-brand group-hover:border-brand`}
+        className={`flex ${dimension} shrink-0 items-center justify-center rounded-full border ${bg} transition-all duration-300 ease-out group-hover:scale-[1.05] group-active:scale-[1.05] shadow-sm`}
       >
         <ArrowRight
-          className={`h-3.5 w-3.5 ${arrow} transition-all duration-300 ease-out group-hover:translate-x-[3px] group-active:translate-x-[3px] group-hover:text-brand-foreground`}
-          strokeWidth={1.5}
+          className={`h-4 w-4 ${arrow} transition-all duration-300 ease-out group-hover:translate-x-[3px] group-active:translate-x-[3px]`}
+          strokeWidth={2}
         />
       </span>
       {label ? <span className={`micro ${text} transition-colors group-hover:text-brand`}>{label}</span> : null}

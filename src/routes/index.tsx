@@ -328,10 +328,10 @@ function Home() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:mt-6 lg:gap-5 xl:mt-8 xl:gap-6">
               {why.map(({ label, Icon, desc }, i) => (
                 <Reveal key={label} delay={i * 100}>
-                  <div className="flex flex-col items-center text-center gap-3 rounded-sm border border-hairline/80 bg-band/30 p-4 lg:p-6 xl:p-8 transition-all duration-300 hover:border-brand/40 hover:bg-background md:items-start md:text-left">
-                    <Icon className="h-5 w-5 text-brand lg:h-7 lg:w-7 xl:h-8 xl:w-8" strokeWidth={1.5} />
-                    <span className="micro font-semibold text-ink lg:text-sm lg:font-bold xl:text-base">{label}</span>
-                    <p className="text-xs text-subtle leading-relaxed lg:text-[13px] xl:text-sm">{desc}</p>
+                  <div className="flex flex-col items-center text-center gap-3 rounded-sm border border-brand bg-brand p-4 lg:p-6 xl:p-8 shadow-sm transition-all duration-300 hover:scale-[1.02] md:items-start md:text-left">
+                    <Icon className="h-5 w-5 text-white lg:h-7 lg:w-7 xl:h-8 xl:w-8" strokeWidth={1.5} />
+                    <span className="micro font-semibold text-white lg:text-sm lg:font-bold xl:text-base">{label}</span>
+                    <p className="text-xs text-white/90 leading-relaxed lg:text-[13px] xl:text-sm">{desc}</p>
                   </div>
                 </Reveal>
               ))}
@@ -396,14 +396,14 @@ function Home() {
           loading="lazy"
           className="h-[320px] w-full object-cover transition-transform duration-1000 ease-out hover:scale-[1.02] md:h-[380px] lg:h-[440px] xl:h-[520px]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand/95 via-brand/75 to-brand/40" />
         <div className="absolute inset-0">
           <div className="mx-auto flex h-full max-w-[1240px] flex-col justify-center items-center text-center md:items-start md:text-left px-5 md:px-10 lg:max-w-[1360px] lg:px-16 xl:max-w-[1600px] xl:px-20 2xl:max-w-[1760px]">
             <Reveal>
-              <h2 className="font-display text-2xl font-semibold leading-tight text-background md:text-4xl lg:text-5xl xl:text-6xl">
+              <h2 className="font-display text-2xl font-semibold leading-tight text-white md:text-4xl lg:text-5xl xl:text-6xl">
                 Built For
                 <br />
-                <span className="font-medium text-background/90">A Cleaner Tomorrow</span>
+                <span className="font-medium text-white/95">A Cleaner Tomorrow</span>
               </h2>
             </Reveal>
             <Reveal delay={150}>
